@@ -61,6 +61,6 @@ body{
     color:#000000;
 }
 
-nav-label {
+label {
     color: white;
 }
