@@ -1,0 +1,2 @@
+Bower can organize the dependencies you need. Forexample, when you are using some versioning control (git) you don't really need to have bootstrap or fontawesome on your repository,
+instead have Bower organize and get everything ready for everyone using the repostiry by reading the Json File.
