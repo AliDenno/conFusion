@@ -44,7 +44,9 @@
                 </div>
             </div>
             <div class="col-xs-9 col-xs-offset-1">
-                <span>Customer Comments</span> Sort by: <input type='text' ng-model='sortItem'>
+                <div style="padding: 0.3cm 0 0.3cm 0;">
+                <h4 style="display:inline">Customer Comments</h4>&emsp;&emsp;<span>Sort by: <input type='text' ng-model='sortItem'></span>
+                </div>
              <li class="media-list" ng-repeat="commentinst in menuCtrl.dish.comments | filter:menuCtrl.filtText">
                 <div class="media-body">
                     <blockquote>
