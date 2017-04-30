@@ -64,7 +64,7 @@
 
         var app = angular.module('confusionApp',[]);
         
-        app.controller('dishDetailController', function() {
+        app.controller('dishDetailController', function($scope,$filter) {
 
             var dish={
                           name:'Uthapizza',
@@ -107,6 +107,22 @@
                                
                            ]
                     };
+            
+              $scope.comments = dish.comments;
+              $scope.$watch('sortItem', function(val)
+                { 
+
+                  if(val==='rating' || val==='date' || val==='author'){
+                     dish.comments = $filter('orderBy')($scope.comments,val);
+                  }
+                  else if (val === '-rating' || val === '-date' || val==='-author') { 
+                      dish.comments = $filter('orderBy')($scope.comments,val);
+                  }
+                  else{
+                    return;
+                  }
+
+                });            
             
             this.dish = dish;
             
