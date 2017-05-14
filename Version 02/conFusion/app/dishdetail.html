@@ -88,40 +88,22 @@
 
         <div class="col-xs-12">
             <form class="form-horizontal" name="commentForm" ng-submit="submitComment()" role="form" novalidate>
-                <div class="form-group has-feedback"
-                     ng-class="{ 'has-error has-feedback' : commentForm.author.$invalid && !commentForm.author.$pristine }">
+                <div class="form-group has-feedback" ng-class="{ 'has-error has-feedback' : commentForm.author.$invalid && !commentForm.author.$pristine }">
                     <label for="author" class="col-sm-3 control-label">Your name</label>
                     <div class="col-sm-9">
-                        <input type="text" id="author" name="author" class="form-control" placeholder="Enter Your Name"
-                               ng-model="formComment.author"
-                               required/>
-                    <span ng-show="commentForm.author.$invalid && !commentForm.author.$pristine"
-                          class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-                    <span ng-show="(commentForm.author.$invalid ||
-                                        commentForm.author.$error.required) &&
-                                        !commentForm.author.$pristine"
-                          class="help-block">Please, enter a name</span>
+                        <input type="text" id="author" name="author" class="form-control" placeholder="Enter Your Name" ng-model="formComment.author" required/>
+			     		<span ng-show="(commentForm.author.$invalid || commentForm.author.$error.required) && !commentForm.author.$pristine" class="help-block">Enter a name</span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Number of stars</label>
                     <div class="radio col-sm-9">
-                        <label>
-                         <input type="radio" ng-model="formComment.rating" value="1"> 1 
-                        </label>
-                        <label>
-                            <input type="radio" ng-model="formComment.rating" value="2"> 2
-                        </label>
-                        <label>
-                            <input type="radio" ng-model="formComment.rating" value="3"> 3
-                        </label>
-                        <label>
-                            <input type="radio" ng-model="formComment.rating" value="4"> 4
-                        </label>
-                        <label>
-                            <input type="radio" ng-model="formComment.rating" value="5"> 5
-                        </label>
+                        <label> <input type="radio" ng-model="formComment.rating" value="1"> 1 </label>
+                        <label> <input type="radio" ng-model="formComment.rating" value="2"> 2 </label>
+                        <label> <input type="radio" ng-model="formComment.rating" value="3"> 3 </label>
+                        <label> <input type="radio" ng-model="formComment.rating" value="4"> 4 </label>
+                        <label> <input type="radio" ng-model="formComment.rating" value="5"> 5 </label>
                     </div>
                 </div>
 
@@ -129,22 +111,15 @@
                      ng-class="{'has-error has-feedback' : commentForm.comment.$invalid && !commentForm.comment.$pristine }">
                     <label for="comment" class="col-sm-3 control-label">Your comments</label>
                     <div class="col-sm-9">
-                        <textarea id="comment" name="comment" rows="10" placeholder="Comment" class="form-control"
-                                  ng-model="formComment.comment" required/>
+                        <textarea id="comment" name="comment" rows="10" placeholder="Comment" class="form-control" ng-model="formComment.comment" required/>
                         </textarea>
-                    <span ng-show="commentForm.comment.$invalid && !commentForm.comment.$pristine"
-                          class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-                    <span ng-show="(commentForm.comment.$invalid ||
-                                        commentForm.comment.$error.required) &&
-                                        !commentForm.comment.$pristine"
-                          class="help-block">Please, enter a comment</span>
+                    <span ng-show="(commentForm.comment.$invalid || commentForm.comment.$error.required) && !commentForm.comment.$pristine" class="help-block">Enter a comment</span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-10">
-                        <button ng-disabled="commentForm.$invalid" type="submit" class="btn btn-primary"><strong>Submit
-                            Comment</strong></button>
+                        <button ng-disabled="commentForm.$invalid" type="submit" class="btn btn-primary"><strong>Submit Comment</strong></button>
                     </div>
                 </div>
             </form>
