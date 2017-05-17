@@ -107,10 +107,12 @@
                     </div>
                 </div>
 
-                <div class="form-group has-feedback" ng-class="{'has-error has-feedback' : commentForm.comment.$invalid && !commentForm.comment.$pristine }">
+                <div class="form-group has-feedback"
+                     ng-class="{'has-error has-feedback' : commentForm.comment.$invalid && !commentForm.comment.$pristine }">
                     <label for="comment" class="col-sm-3 control-label">Your comments</label>
                     <div class="col-sm-9">
-                   <textarea id="comment" name="comment" rows="10" placeholder="Comment" class="form-control" ng-model="formComment.comment" required/></textarea>
+                        <textarea id="comment" name="comment" rows="10" placeholder="Comment" class="form-control" ng-model="formComment.comment" required/>
+                        </textarea>
                     <span ng-show="(commentForm.comment.$invalid || commentForm.comment.$error.required) && !commentForm.comment.$pristine" class="help-block">Enter a comment</span>
                     </div>
                 </div>
@@ -125,10 +127,10 @@
     </div>
 </div>
 <!-- build:js scripts/main.js -->
-     <script src="scripts/controllers.js"></script>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
     <script src="scripts/services.js"></script>
-    <script src="../bower_components/angular/angular.min.js"></script>
-    <script src="scripts/app.js"></script>
 <!-- endbuild -->
 
 </body>
