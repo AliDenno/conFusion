@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="confusionApp">
-
-<head>
-     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head 
-         content must come *after* these tags -->
-    <title>Ristorante Con Fusion: About Us</title>
-        <!-- Bootstrap -->
-<!-- build:css styles/main.css -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="styles/bootstrap-social.css" rel="stylesheet">
-    <link href="styles/mystyles.css" rel="stylesheet">
-<!-- endbuild -->
-</head>
-
-<body>
 
     <div class="container" ng-controller="ContactController">
         <div class="row">
@@ -33,10 +12,10 @@
                <hr>
             </div>
         </div>
-        
+
         <div class="row row-content">
            <div class="col-xs-12">
-              <h3>Location Information</h3> 
+              <h3>Location Information</h3>
            </div>
             <div class="col-xs-12 col-sm-4 col-sm-offset-1">
                    <h5>Our Address</h5>
@@ -46,7 +25,7 @@
 		              HONG KONG<br>
 		              <i class="fa fa-phone"></i>: +852 1234 5678<br>
 		              <i class="fa fa-fax"></i>: +852 8765 4321<br>
-		              <i class="fa fa-envelope"></i>: 
+		              <i class="fa fa-envelope"></i>:
                         <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
             </div>
@@ -64,7 +43,7 @@
 
         <div class="row row-content">
            <div class="col-xs-12">
-              <h3>Send us your Feedback</h3> 
+              <h3>Send us your Feedback</h3>
            </div>
             <div class="col-xs-12 col-sm-9" ng-controller="FeedbackController">
                 <form class="form-horizontal" name="feedbackForm" ng-submit="sendFeedback()" novalidate>
@@ -125,7 +104,7 @@
                             </select>
                         <span ng-show="invalidChannelSelection" class="help-block">Select an option.</span>
                         </div>
-                    </div>            
+                    </div>
                     <div class="form-group">
                         <label for="feedback" class="col-sm-2 control-label">Your Feedback</label>
                         <div class="col-sm-10">
@@ -133,7 +112,7 @@
                                 ng-model="feedback.comments">
                             </textarea>
                         </div>
-                    </div>  
+                    </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn btn-primary" ng-disabled="feedbackForm.$invalid">Send Feedback</button>
@@ -141,7 +120,7 @@
                     </div>
                 </form>
             </div>
-             
+
                 <div class="col-xs-12 col-sm-3">
               <h3>Your Current Feedback:</h3>
               <p>{{feedback.firstName}} {{feedback.lastName | uppercase }}</p>
@@ -151,15 +130,6 @@
               <p>Comments: {{feedback.comments}}</p>
             </div>
             </div>
-   
+
 
     </div>
-
-<!-- build:js scripts/main.js -->
-    <script src="../bower_components/angular/angular.min.js"></script>
-    <script src="scripts/app.js"></script>
-<!-- endbuild -->
-
-</body>
-
-</html>
