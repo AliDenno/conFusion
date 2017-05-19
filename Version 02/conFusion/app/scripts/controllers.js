@@ -66,10 +66,12 @@ angular.module('confusionApp')
 		}])
 
 		 .controller('DishDetailController', ['$scope', 'menuFactory', function($scope, menuFactory) {
-
+			
              $scope.dish= menuFactory.getDish(3);
 
-		}]).controller('DishCommentController', ['$scope', function ($scope) {
+		}])
+		
+		.controller('DishCommentController', ['$scope', function ($scope) {
 
 		var JSObj = $scope;
 
