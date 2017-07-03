@@ -23,13 +23,27 @@ gulp.task('jshint', function() {
 
 gulp.task('usemin',['jshint'], function () {
   return gulp.src('./app/*.html')
-    .pipe(usemin({
-      css:[minifycss(),rev()],
-      js: [ngannotate(),uglify(),rev()]
-    }))
-    
-    .pipe(gulp.dest('dist/'));
+      .pipe(usemin({
+        css:[minifycss(),rev()],
+        js: [ngannotate(),uglify(),rev()]
+      }))
+      .pipe(gulp.dest('dist/')),
+      gulp.src('./app/views/*.html')
+          .pipe(usemin({
+            css:[minifycss(),rev()],
+            js: [ngannotate(),uglify(),rev()]
+          }))
+      .pipe(gulp.dest('dist/views/'));
 });
+//gulp.task('usemin',['jshint'], function () {
+//  return gulp.src('./app/**/*.html')
+//    .pipe(usemin({
+//      css:[minifycss(),rev()],
+//      js: [ngannotate(),uglify(),rev()]
+//    }))
+//    
+//    .pipe(gulp.dest('dist/'));
+//});
 
 // Images
 gulp.task('imagemin', function() {
