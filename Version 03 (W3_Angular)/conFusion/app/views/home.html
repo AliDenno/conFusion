@@ -8,7 +8,11 @@
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
 			<!-- use media object to display the information --> 
 			<!-- obtain the data through the controller from menuFactory and corporateFactory -->
-				 <div class="media">
+
+                <div ng-if="!showDish">
+                    <h3>{{message}}</h3>
+                </div>
+                <div class="media" ng-if="showDish">
                 <div class="media-left media-middle">
                     <a ui-sref="app.dishdetails({id: featuredDish._id})">
                         <img class="media-object img-thumbnail"
